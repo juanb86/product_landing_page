@@ -1,19 +1,17 @@
+head {
+    display: flex;
+}
+
+
 /* Global */
 
 body {
     font: 15px/1.5 Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
+    overflow-x: hidden;
 }
 
-#container {
-    width: 80%;
-    background-color: royalblue;
-    overflow: hidden;
-}
-
-ul {
+* {
     padding: 0;
     margin: 0;
 }
@@ -22,7 +20,7 @@ ul {
 /* Header */
 
 #header {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.8);
     position: fixed;
     top: 0;
     left: 0;
@@ -30,6 +28,8 @@ ul {
 }
 
 #header-img {
+    width: 150px;
+    height: auto;
     filter: invert(100%);
     float: left;
     margin-left: 20px;
@@ -37,7 +37,7 @@ ul {
 
 #nav-bar {
     float: right;
-    margin: 20px 30px;
+    margin: 10px 30px;
 }
 
 #nav-bar ul {
@@ -52,9 +52,126 @@ ul {
 .nav-link a {
     text-decoration: none;
     text-transform: uppercase;
+    font-weight: bold;
     color: white;
 }
 
-#container {
-    margin-top: 500px;
+
+/* Showcase */
+
+.showcase {
+    width: 100%;
+    height: 120vh;
+    background: url(images/landscape.jpeg) no-repeat;
+    text-align: center;
+}
+
+#container h1 {
+    padding-top: 180px;
+    font-size: xxx-large;
+}
+
+#container form {
+    margin-top: 250px;
+    font-size: large;
+}
+
+#email {
+    width: 300px;
+}
+
+#submit {
+    padding: 0.5%;
+    background-color: lightgrey;
+    border: none;
+    border-radius: 15%;
+}
+
+
+/* Transition */
+
+.transition {
+    padding: 5% 100% 5% 100%;
+    margin-top: -10%;
+    background: linear-gradient(0deg, #f4f4f4, #f4f4f4, rgba(0, 0, 0, 0.0));
+}
+
+
+/* Description */
+
+#description {
+    display: flex;
+    flex-direction: row;
+    margin-top: -6%;
+    width: 80%;
+    margin-left: 10%;
+}
+
+.box {
+    margin: 4%;
+    background-color: lightgrey;
+    padding: 2%;
+    border-radius: 15%;
+}
+
+.box-title {
+    font-size: xx-large;
+    font-weight: bolder;
+    text-align: center;
+}
+
+.box-desc {
+    font-size: large;
+}
+
+
+/* Video */
+
+.video {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+#video {
+    width: 60vw;
+    height: 34vw;
+}
+
+
+/* Footer */
+
+#footer {
+    background-color: darkgrey;
+    margin-top: 4%;
+    padding: 1%;
+    padding-left: 15%;
+}
+
+#footer a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (max-width: 540px) {
+    #header-img {
+        width: 40%;
+        height: auto;
+        filter: invert(100%);
+        float: none;
+        margin-left: 30%;
+    }
+    #nav-bar {
+        float: none;
+        margin: 10px 30px;
+        margin-left: 20%;
+    }
+    #container h1 {
+        padding-top: 220px;
+        font-size: xxx-large;
+    }
+    #description {
+        display: flex;
+        flex-direction: column;
+    }
 }
